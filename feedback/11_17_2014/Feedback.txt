@@ -1,0 +1,33 @@
+•	Comment CJ1: Professor Aziz suggested me to use plural for user to avoid “his or her” by using either "his" or plural. I tried to keep them in singular in some places to avoid confusion, but I kept most of them in plural per his advice. Will you be fine with leaving them as plural?
+o	His feedback is here: https://github.com/luonanh/masterReport/tree/master/feedback/11_01_2014, the AA_Feeback_2.pdf, next to “p17”
+•	Comment CJ4: the above section how an clothing item can be categorized as (bottom or top), while this section explains the definition of an outfit in our app. An outfits consists of top, bottom, and optionally an outer). Please let me know if you still want me to take this part out.
+•	Comment CJ5: once the user chooses to wear an item, the app will decide if this item is still clean or dirty by first
+o	check how many times this item has been worn 
+o	Each item is assigned a maximum number of it can be worn before it’s considered dirty. If the number above exceeds this maximum number, then it’s dirty, otherwise, it’s still clean.
+•	Comment CJ6: You are correct that the closet either belongs to a man or a woman. This is decided when the user registers, the gender will be entered. What I meant here is that the algorithm of clothes matching is different between male and female. Different scores will be given at certain steps (through different tables) based on the gender. 
+Anh's questions 11_17_2014
+
+•	Comment CJ7: The implementation was to match every possible pair and to score each pair. However, I meant to describe what it does here without going into detail. The detail was explained in 3.1.3.2.4
+•	Comment CJ8: you are correct. This is one of the thing I should modify in the future to eliminate more items.
+•	Comment CJ9: thanks for pointing this out. We did create a temperature table based on material but the result was not expected, part of that was due to another bug in my code. When we fixed the bug, we didn’t put back the material table to simplify this step. We will plan to add the material table back in the future.
+•	Comment CJ10: please refer to the explanation for Comment CJ6.
+•	Comment CJ11: by this, I meant the code was written for both genders. During run time, the algorithm will pick the right one based on the gender input from user.
+•	Comment CJ12, CJ13: here’s the new rephrase: “The UI fragment classes were designed to decouple as much as possible from the core classes for expansibility and flexibility. Throughout this project, expansibility and flexibility is always treated as the highest priority in our design.”
+•	Comment CJ14: I broke the sentence into 2 as follows: “[VCG], which is referenced in Advanced Programming Tool class [APT], is a helpful source with many good examples. It that has helped me tremendously throughout the development process.” Please let me know if this is fine with you.
+
+
+Professor Julien's response
+
+1. I guess this is a difference in style. Adnan trumps me in this case.
+4. Make it so that the text doesn't seem so repetitive. Make it clearer that these are about two different things.
+5. Then include this. It's not in the paper (at least not this clearly).
+6. You have not yet convinced me (here or on the paper) that clothes matching is different depending on gender. If you really want me to buy this, you should give some concrete examples where, if you used the same algorithm, you would end up with non-ideal choices.
+9. Your paper doesn't explain it this way. You should.
+
+Anh's replies
+
+•	4. “The selection algorithm ranks different outfits, each of which consists of a top, a bottom, and maybe an outer layer if the weather is cold. The user can choose among different occasions including formal, semi-formal, casual, day-out, night-out and different outfits will be recommended.”
+•	5. “The user can decide to wear the outfit by clicking on the “Wear” button, and dirty items will be placed in laundry bag as shown in Figure 2.12. An item is considered dirty if it is worn more than a maximum number of worn times, which is assigned to each item based on style. The reason for doing this comparison instead of moving an item to the laundry bag right away because there are certain pieces of clothes that we can wear more than once such as jackets or jeans.”
+•	6. There are styles that are available for female but not for male (legging_skinny, blouse_sleeveless) and vice versa. In occasion matching step and pair matching steps, there are different tables for male and female for this reason. 
+•	9. You are correct that I didn’t clearly explain in this section. I did mentioned briefly about trying material in temperature filter step in section 4.1 of the result, and explained why we chose style over material in section 3.1.3.2.2 (under the table 3.2b).
+
